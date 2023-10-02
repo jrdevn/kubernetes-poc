@@ -26,11 +26,11 @@ spec:
         env: 
           - name: MONGO_INITDB_ROOT_USERNAME
             valueFrom: 
-              configMapKeyRef:
-                name: storage-db-cm
-                key: user
+              secretKeyRef:
+                name: storage-db-secrets
+                key: username
           - name: MONGO_INITDB_ROOT_PASSWORD
             valueFrom: 
-              configMapKeyRef:
-                name: storage-db-cm
+              secretKeyRef:
+                name: storage-db-secrets
                 key: password
