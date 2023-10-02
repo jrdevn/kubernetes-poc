@@ -8,6 +8,6 @@ spec:
   selector:
     app: storage-db
   ports:
-  - port: 27017
-    targetPort: 27017
-    protocol: TCP
+    - protocol: TCP
+      port: 27017
+      targetPort: 27017

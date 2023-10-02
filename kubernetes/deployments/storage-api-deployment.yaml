@@ -23,3 +23,9 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 8081
+        env: 
+          - name: MONGO_DB_URL
+            valueFrom: 
+              configMapKeyRef:
+                name: storage-api-cm
+                key: mongoDbUrl

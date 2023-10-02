@@ -21,5 +21,11 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
+        env: 
+          - name: STORAGE_URL
+            valueFrom: 
+              configMapKeyRef:
+                name: gateway-api-cm
+                key: storageUrl
         ports:
         - containerPort: 8080
